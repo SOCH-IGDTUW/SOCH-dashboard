@@ -10,19 +10,18 @@
 <body>
     <main>
         <img src="assets/SOCH-logo.jpeg" class="logo" alt="SOCH LOGO">
-        <h2>LOGIN</h2>
-        <form action="/login" method="post">
+        <h2>REGISTER</h2>
+        <form action="/register" method="post">
             <div class="form-group">
                 <label for="email">Email</label><br>
-                <input type="email" autofocus required name="username" id="username">
+                <input type="email" autofocus name="username" id="email">
             </div>
             <div class="form-group">
                 <label for="password">Password</label><br>
-                <input type="password" required name="password" id="password">
+                <input type="password" name="password" id="password">
             </div>
-            <button class="submit-btn" type="submit">login</button>
+            <button class="submit-btn" type="submit">register</button>
         </form>
-        <a href="/register">Create user</a>
     </main>
 </body>
 </html>

@@ -1,0 +1,24 @@
+<%- include("partials/header"); %>
+<div class="writing-main">
+  <div class="button-group">
+    <a href="/create-write"><i class="fas fa-plus"></i>Create Post</a>
+  </div>
+  <div class="all-posts">
+    <h1>All Writing Posts</h1>
+    <% posts.forEach(function(post){ %>
+    <div class="post">
+      <div class="post-top">
+        <h2>Title: <%=post.title%></h2>
+        <h4>Written by: <%= post.author %></h4>
+      </div>
+      <hr />
+      <p>
+        <%=post.content.substring(0, 100) + " ..."%>
+        <a class="read-more" href="/posts/<%=post._id%>">Read More</a>
+      </p>
+    </div>
+    <span></span>
+    <% }) %>
+  </div>
+</div>
+<%- include("partials/footer"); %>

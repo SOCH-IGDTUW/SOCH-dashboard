@@ -1,0 +1,126 @@
+:root{
+    --font-sans: 'Poppins', sans-serif;
+    --font-serif: 'Playfair Display', serif; 
+    --blue-grey: #374a50;
+    --cyan: #00adb5;
+    --pink: #d8849e;
+    --peach: #e9a6a6;
+    --salmon: #fdaf7c;
+    --blue: #4d56a2;
+    --grey: #96afb6;
+    --navy-blue: #071E3D;
+    --blue2: #1F4287;
+    --blue-green: #278EA5;
+    --cyan2: #21E6C1;
+}
+.button-group{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1vw 4vw 1vw auto;
+    width: 30%;
+}
+.button-group a{
+    /* background: linear-gradient(45deg, rgb(7, 30, 61), rgb(0, 173, 181)); */
+    background: var(--navy-blue);
+    border-radius: 2vw;
+    padding: .5vw 2vw;
+    color: white;
+    text-decoration: none;
+}
+.button-group a:hover{
+    background: var(--blue-green);
+}
+.button-group a i{
+    margin-right: .5vw;
+}
+.all-posts, .all-arts{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 6vw;
+}
+.all-posts h1, .all-arts h1{
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: var(--font-serif);
+}
+.create-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5vw;
+}
+.form-group label{
+    font-weight: bold;
+}
+.form-group input,
+.form-group textarea{
+    width: 70vw;
+    font-family: var(--font-sans);
+}
+.post{
+    font-family: var(--font-sans);
+    text-align: left;
+    /* border: .2vw solid black; */
+    margin-bottom: 2vw;
+}
+.post h2,
+.post h4{
+    text-align: left;
+    margin: 0;
+    padding-left: 2vw;
+}
+.post h2{
+    font-weight: 600;
+    font-size: 1.5vw;
+    padding-top: 1vw;
+}
+.post h4{
+    font-size: 1vw;
+    font-weight: 500;
+    padding-bottom: .5vw;
+}
+.post p{
+    margin: 0;
+    padding-left: 2vw;
+}
+.post-top{
+    background: #EEEEEE;
+}
+hr{
+    margin: 0;
+}
+.read-more{
+    font-size: 1vw;
+    text-decoration: none;
+    color: var(--blue);
+}
+.submit-btn{
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    height: 3vw;
+    margin-top: 1.5vw;
+    background: var(--navy-blue);
+    border: none;
+    border-radius: .5vw;
+    cursor: pointer;
+    margin-bottom: 3vw;
+    color: white;
+}
+.submit-btn:hover{
+    background: var(--cyan);
+}
+.post-more{
+    width: 80%;
+    margin: auto;
+}
