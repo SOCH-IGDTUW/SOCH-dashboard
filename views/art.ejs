@@ -1,10 +1,29 @@
 <%- include("partials/header"); %>
-<div class="art-main">
-  <div class="button-group">
-    <a href="/create-write"><i class="fas fa-plus"></i>Create Post</a>
+  <div class="art-main">
+    <div class="button-group">
+      <a href="/create-art"><i class="fas fa-plus"></i>Create Post</a>
+    </div>
+    <div class="all-arts">
+      <h1>All Art Posts</h1>
+      <div class="art-posts">
+        <% arts.forEach((art)=>{ %>
+          <div class="art">
+            <img src="https://drive.google.com/uc?export=view&id=<%= art.image %>" alt="art" class="art-img" />
+            <div class="artist-details">
+              <div class="data">
+                <h3>
+                  <%= art.title %>
+                </h3>
+                <h4>By <%= art.artist %>
+                </h4>
+              </div>
+              <div class="icons">
+                <a href="/delete/<%= art._id %>"><i class="far fa-trash-alt"></i></a><br>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+      </div>
+    </div>
   </div>
-  <div class="all-arts">
-    <h1>All Art Posts</h1>
-  </div>
-</div>
-<%- include("partials/footer"); %>
+  <%- include("partials/footer"); %>

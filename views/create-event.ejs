@@ -1,0 +1,40 @@
+<%- include("partials/header"); %>
+<div class="create-main">
+    <h1>Create a New Event</h1>
+    <form action="/create-event" method="post">
+        <div class="form-group">
+            <label for="title">Event Name
+            </label>
+            <input type="text" autofocus required name="title" id="title">
+        </div>
+        <div class="form-group">
+            <label for="desc">Event Description
+            </label>
+            <input type="text" required name="desc" id="desc">
+        </div>
+        <div class="form-group">
+            <label for="price">Event Fee
+            </label>
+            <input type="number" required name="price" id="price">
+        </div>
+        <div class="form-group">
+            <label for="venue">Event Venue
+            </label>
+            <input type="text" required name="venue" id="venue">
+        </div>
+        <div class="form-group">
+            <label for="schedule">Event Date & Time
+            </label>
+            <input type="datetime" required name="schedule" id="schedule">
+        </div>
+        <div class="form-group">
+            <label for="poster">
+                Event Poster
+            </label>
+            <!-- <input type="file" required name="art" id="art"> -->
+            <input type="text" required name="poster" id="poster" placeholder="Enter drive link of poster">
+        </div>
+        <button class="submit-btn" type="submit">Submit</button>
+    </form>
+</div>
+<%- include("partials/footer"); %>

@@ -1,15 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root{
     --font-sans: 'Poppins', sans-serif;
-    --font-serif: 'Playfair Display', serif; 
-    --blue-grey: #374a50;
-    --cyan: #00adb5;
-    --pink: #d8849e;
-    --peach: #e9a6a6;
-    --salmon: #fdaf7c;
-    --blue: #4d56a2;
-    --grey: #96afb6;
-    --navy-blue: #071E3D;
-    --blue2: #1F4287;
-    --blue-green: #278EA5;
-    --cyan2: #21E6C1;
+    --font-serif: 'Playfair Display', serif;
+    --font-mon-sans: 'Montserrat', sans-serif; 
+    --blue: #6675df;
+    --dark-grey: #333;
+    --mid-grey: #555;
+    --light-grey: #e6e6e6
+}
+.all-arts,
+.all-posts{
+    align-items: center;
+}
+.art-posts,
+.write-posts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1vw;
+    align-items: center;
+}
+.art{
+    width: 20vw;
+    background-color: var(--light-grey);
+    border-radius: 1vw;
+}
+.art-img{
+    width: 20vw;
+    border-radius: 1vw 1vw 0 0;
+}
+.artist-details{
+    padding: .5vw 1vw;
+    color: var(--dark-grey);
+    font-family: var(--font-sans);
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+}
+.artist-details h3{
+    font-size: 1.5vw;
+    margin: 0;
+    font-weight: 500;
+}
+.artist-details h4{
+    font-size: 1vw;
+    margin: 0;
+    font-weight: 400;
+}
+.fa-trash-alt{
+    color: rgb(250, 100, 100);
+}
+.fa-edit{
+    color: var(--blue);
 }

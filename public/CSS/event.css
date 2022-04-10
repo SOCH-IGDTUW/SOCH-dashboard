@@ -1,0 +1,154 @@
+.event-posts{
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.eve-icons{
+  display: flex;
+  justify-content: space-around;
+}
+.item-container {
+    position: relative;
+    margin: 24px;
+    width: 250px;
+    height: 365px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.068);
+    cursor: pointer;
+  }
+  
+  .img-container,
+  .body-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .img-container img {
+    width: 100%;
+  }
+  
+  .body-container {
+    position: relative;
+  }
+  
+  .overlay {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: #817dc088;
+    opacity: 0;
+    transition: height linear 0.4s, opacity linear 0.2s;
+  }
+  
+  .item-container:hover .overlay {
+    opacity: 1;
+    height: 150px;
+  }
+  
+  .event-info {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+  }
+  
+  .title,
+  .price {
+    /* color: var(--dark-blue); */
+    color: var(--purple);
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 5px;
+  }
+  
+  .info {
+    letter-spacing: 0.5px;
+    /* margin-bottom: 6px; */
+    font-size: 0.7em;
+    margin: 0;
+    color: #333;
+  }
+  
+  .separator {
+    width: 20%;
+    height: 0.2vw;
+    background-color: var(--bright-pink);
+    margin: 6px 0;
+  }
+  
+  .additional-info {
+    border-top: 1px solid #bbb;
+    margin-top: 12px;
+    padding: 28px;
+    padding-bottom: 0;
+  }
+  
+  .additional-info .info {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .info i {
+    color: var(--purple);
+    font-size: 1.1em;
+    margin-right: 4px;
+  }
+  
+  .info span {
+    color: #18537a;
+    font-weight: bolder;
+  }
+  
+  .action {
+    color: #fff;
+    border: 3px solid #fff;
+    background-color: transparent;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    outline: none;
+    cursor: pointer;
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: background-color 0.4s, top 0.4s;
+  }
+  
+  .item-container:hover .action {
+    top: 50px;
+  }
+  
+  .action:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  @media (max-width: 1024px) {
+    .emoji_container{
+      bottom: 38%;
+      left: 1%;
+    }
+    .emoji_container > img {
+      width: 32vw;
+    }
+    .events__top > h6,
+    .contact_banner > h6 {
+      width: 90%;
+      margin: auto;
+    }
+    .separator {
+      height: .6vw;
+    }
+  }

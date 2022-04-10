@@ -1,0 +1,73 @@
+<%- include("partials/header"); %>
+  <div class="event-main">
+    <div class="button-group">
+      <a href="/create-event"><i class="fas fa-plus"></i>Create Post</a>
+      <a href="/create-event-gallery"><i class="fas fa-plus"></i>Create Gallery Post</a>
+    </div>
+    <div class="all-events">
+      <h1>All Event Posts</h1>
+      <div class="event-posts">
+        <% events.forEach((event)=> { %>
+          <div class="item-container">
+            <div class="img-container">
+              <img src="https://drive.google.com/uc?export=view&id=<%= event.poster %>" alt="Event image" />
+
+            </div>
+            <div class="body-container">
+              <div class="overlay"></div>
+              <div class="event-info">
+                <p class="title">
+                  <%= event.title %>
+                </p>
+                <div class="separator"></div>
+                <p class="info">
+                  <%= event.desc %>
+                </p>
+                <p class="price">
+                  <% if(event.fee !=0) { %>
+                    &#8377 <%= event.fee %>
+                </p>
+                <% } else { %>
+                  Free
+                  <% } %>
+                    <div class="additional-info">
+                      <p class="info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <%= event.venue %>
+                      </p>
+                      <p class="info">
+                        <i class="far fa-calendar-alt"></i>
+                        <%= event.schedule %>
+                      </p>
+                    </div>
+              </div>
+              <div class="eve-icons action">
+                <a href="/delete-event/<%= event._id %>"><i class="far fa-trash-alt"></i></a><br>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+      </div>
+    </div>
+    <div class="all-events">
+      <h1>All Event Gallery Posts</h1>
+      <div class="event-posts">
+        <% posts.forEach((post)=> { %>
+          <div class="art">
+            <img src="https://drive.google.com/uc?export=view&id=<%= post.thumbnail %>" alt="art" class="art-img" />
+            <div class="artist-details">
+              <div class="data">
+                <h3>
+                  <%= post.title %>
+                </h3>
+              </div>
+              <div class="icons">
+                <a href="/delete-event-gallery/<%= post._id %>"><i class="far fa-trash-alt"></i></a><br>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+  <%- include("partials/footer"); %>

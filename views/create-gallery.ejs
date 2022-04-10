@@ -1,23 +1,18 @@
 <%- include("partials/header"); %>
 <div class="create-main">
-    <h1>Create a New Art Post</h1>
-    <form action="/create-art" method="post">
+    <h1>Create a New Event Gallery Post</h1>
+    <form action="/create-event-gallery" method="post">
         <div class="form-group">
             <label for="title">Title
             </label>
-            <input type="text" autofocus required name="title" id="title">
-        </div>
-        <div class="form-group">
-            <label for="artist">Artist
-            </label>
-            <input type="text" required name="artist" id="artist">
+            <input type="text" autofocus required name="title" id="title" placeholder="Event Name">
         </div>
         <div class="form-group">
             <label for="art">
-                Art
+                Thumbnail
             </label>
             <!-- <input type="file" required name="art" id="art"> -->
-            <input type="text" required name="art" id="art" placeholder="Enter URL of art">
+            <input type="text" required name="thumbnail" id="thumbnail" placeholder="Enter URL of picture">
         </div>
         <button class="submit-btn" type="submit">Submit</button>
     </form>

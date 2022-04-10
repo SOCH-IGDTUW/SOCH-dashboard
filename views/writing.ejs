@@ -5,20 +5,33 @@
   </div>
   <div class="all-posts">
     <h1>All Writing Posts</h1>
+    <div class="write-posts">
     <% posts.forEach(function(post){ %>
-    <div class="post">
-      <div class="post-top">
-        <h2>Title: <%=post.title%></h2>
-        <h4>Written by: <%= post.author %></h4>
+      <div class="art">
+        <img src="https://drive.google.com/uc?export=view&id=<%= post.content %>" alt="write-up" class="art-img" />
+        <div class="artist-details">
+          <div class="data">
+            <h3>
+              <%= post.title %>
+            </h3>
+            <h4>By <%= post.author %>
+            </h4>
+          </div>
+          <div class="icons">
+            <a href="/delete-post/<%= post._id %>"><i class="far fa-trash-alt"></i></a><br>
+          </div>
+        </div>
       </div>
-      <hr />
-      <p>
-        <%=post.content.substring(0, 100) + " ..."%>
-        <a class="read-more" href="/posts/<%=post._id%>">Read More</a>
-      </p>
-    </div>
-    <span></span>
+      <!-- <tr>
+        <td><%=post.title%></td>
+        <td><%= post.author %></td>
+        <td><%=post.content.substring(0, 50) + " ..."%></td>
+        <td><a class="read-more" href="/posts/<%=post._id%>">Read More</a></td>
+        <td><a href="/delete-post/<%= post._id %>"><i class="far fa-trash-alt"></i></a></td>
+      </tr> -->
+
     <% }) %>
+  </div>
   </div>
 </div>
 <%- include("partials/footer"); %>
