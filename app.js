@@ -5,34 +5,12 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
-const multer = require("multer");
 const User = require("./models/user")
 const main = require("./routes/main")
 const user = require("./routes/user")
 const art = require("./routes/art")
 const write = require("./routes/write")
 const events = require("./routes/events")
-
-// setup multer storage
-let storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    const dir = "./public/uploads/" + file.fieldname + "/";
-    cb(null, dir);
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
-  },
-});
-let upload = multer({
-  storage: storage,
-  fileFilter: function (req, file, cb) {
-    if (file.mimetype == "image/png" || file.mimetype == "image/jpeg") {
-      cb(null, true);
-    } else{
-      cb(null, false);
-    }
-  },
-});
 
 const app = express();
 app.use(express.static("public"));
@@ -83,6 +61,6 @@ app.post("/create-write", write.createWritePOST);
 app.post("/create-event", events.createEventPOST);
 app.post("/create-event-gallery", events.createEventGalleryPOST);
 
-app.listen(3000, function () {
-  console.log("Server started at port 3000");
+app.listen(process.env.PORT || 3000, function () {
+  console.log("Server started");
 });

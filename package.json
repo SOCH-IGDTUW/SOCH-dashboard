@@ -17,11 +17,11 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnshikaG0219/SOCH-DASHBOARD.git"
+    "url": "git+https://github.com/SOCH-IGDTUW/SOCH-dashboard.git"
   },
   "author": "Anshika",
   "license": "ISC",
