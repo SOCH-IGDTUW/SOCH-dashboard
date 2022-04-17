@@ -6,7 +6,8 @@ const eventSchema = new mongoose.Schema({
     venue: String,
     fee: Number,
     poster: String,
-    schedule: String
+    schedule: String,
+    link: String
 })
 
 module.exports = new mongoose.model('event', eventSchema)
