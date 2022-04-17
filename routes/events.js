@@ -59,6 +59,7 @@ exports.createEventPOST = (req, res) => {
     const fee = req.body.price;
     const venue = req.body.venue;
     const schedule = req.body.schedule;
+    const link = req.body.form;
     const event = new Event({
       title: title,
       desc: desc,
@@ -66,6 +67,7 @@ exports.createEventPOST = (req, res) => {
       fee: fee,
       venue: venue,
       schedule: schedule,
+      link: link
     });
     event.save(function (err) {
       if (!err) res.redirect("/event");
