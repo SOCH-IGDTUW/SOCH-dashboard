@@ -79,9 +79,10 @@ exports.createEventPOST = (req, res) => {
 };
 
 exports.createEventGalleryPOST = (req, res) => {
-  if(res.isAuthenticated())
+  if(req.isAuthenticated())
   {
     const title = req.body.title;
+    const poster = req.body.thumbnail;
     const url = poster.substring(
       poster.indexOf("/d/") + 3,
       poster.lastIndexOf("/view")
